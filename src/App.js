@@ -3,7 +3,7 @@ import contractAbi from "./contracts/Counter.json"
 import {ethers} from "ethers";
 
 //contract address
-const contractAddress = "0x8B4d01818D8213fC30Da5FDe5e20456470044Cc9";
+const contractAddress = "0x4800Cf28C598BA85a3465a3e49AE94e94503A4fC";
 const abi = contractAbi.abi;
 const provider = new ethers.providers.Web3Provider(window.ethereum);
 const singer = provider.getSigner();
