@@ -65,6 +65,7 @@ function App() {
         <p>ContractAddress: { contractAddress }</p>
         <p>Wallet Address: { walletAddress }</p>
         <p>count: { count }</p>
+        <p>incrementを押すとcountが１増えます。decrementを押すとcountが１減ります。countはコントラクト全体で共有されていて、getで現在の値がわかります。</p>
         <button onClick={connectWalletHandler}>Connect Wallet</button>
         <button onClick={inc}>increment</button>
         <button onClick={dec}>decrement</button>
