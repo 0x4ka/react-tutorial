@@ -15,7 +15,7 @@ function App() {
   const [count, setCount] = useState("no count");
 
   contract.on("UpdatedCount", (from, to, amount, event) => {
-    setCount(from[0]);
+    setCount(parseInt(from, 10))
   });
 
   const connectWalletHandler = async () => {
@@ -52,6 +52,12 @@ function App() {
     }
   }
 
+  const get = async () => {
+    const c = await contract.get();
+    setCount(parseInt(c, 10));
+    console.log(c);
+  }
+
   return (
     <div>
       <div>
@@ -62,6 +68,7 @@ function App() {
         <button onClick={connectWalletHandler}>Connect Wallet</button>
         <button onClick={inc}>increment</button>
         <button onClick={dec}>decrement</button>
+        <button onClick={get}>get</button>
       </div>
     </div>
   )
