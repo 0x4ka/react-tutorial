@@ -1,2 +1,2 @@
-# Getting Started with Create React App
-./build/index.html
+#GO APP
+Go2App[]./build/index.html]
