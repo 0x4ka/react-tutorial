@@ -13,7 +13,7 @@
     "web-vitals": "^2.1.4",
     "web3": "^1.7.0"
   },
-  "homepage": "./",
+  "homepage": "./build/index.html",
   "scripts": {
     "start": "react-scripts start",
     "test": "react-scripts test",
