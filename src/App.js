@@ -15,7 +15,7 @@ function App() {
   const [count, setCount] = useState("no count");
 
   contract.on("UpdatedCount", (from, to, amount, event) => {
-    setCount(from);
+    setCount(from[0]);
   });
 
   const connectWalletHandler = async () => {
