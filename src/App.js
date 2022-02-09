@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useReducer, useState } from "react";
 import contractAbi from "./contracts/Counter.json"
 import {ethers} from "ethers";
 
@@ -13,6 +13,7 @@ function App() {
 
   const [walletAddress, setWalletAddress] = useState("No Wallet Connection!");
   const [count, setCount] = useState("no count");
+  var userAddress;
 
   contract.on("UpdatedCount", (from, to, amount, event) => {
     setCount(parseInt(from, 10))
@@ -38,7 +39,7 @@ function App() {
 
   const inc = async () => {
     try {
-      await contract.inc();
+      await contract.inc(walletAddress);
     } catch(err) {
       console.log(err);
     }
@@ -46,7 +47,7 @@ function App() {
 
   const dec = async () => {
     try {
-      await contract.dec();
+      await contract.dec(walletAddress);
     } catch(err) {
       console.log(err);
     }
