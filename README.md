@@ -1,2 +1,2 @@
 #GO APP
-Go2App[]./build/index.html]
+Go2App[./build/index.html]
